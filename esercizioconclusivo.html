@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrizione Automobile</title>
+</head>
+<body>
+    <h1>Automobile: Modello XYZ</h1>
+
+    <img src="https://via.placeholder.com/600x400" alt="Immagine dell'automobile" width="600">
+
+    <h2>Prezzi per Modello e Tipologia di Alimentazione</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Modello</th>
+                <th>Benzina</th>
+                <th>Diesel</th>
+                <th>Elettrica</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Base</td>
+                <td>20.000 &euro;</td>
+                <td>22.000 &euro;</td>
+                <td>25.000 &euro;</td>
+            </tr>
+            <tr>
+                <td>Sport</td>
+                <td>25.000 &euro;</td>
+                <td>27.000 &euro;</td>
+                <td>30.000 &euro;</td>
+            </tr>
+            <tr>
+                <td>Luxury</td>
+                <td>30.000 &euro;</td>
+                <td>33.000 &euro;</td>
+                <td>40.000 &euro;</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Optional Disponibili</h2>
+    <ul>
+        <li>Climatizzatore automatico</li>
+        <li>Sistema di navigazione GPS</li>
+        <li>Sedili in pelle</li>
+        <li>Sensori di parcheggio</li>
+        <li>Tetto panoramico</li>
+    </ul>
+
+    <h2>Punti di Forza</h2>
+    <p>
+        Il modello XYZ si distingue per il suo design moderno, l'efficienza dei motori e una vasta gamma di tecnologie di assistenza alla guida.
+        Ideale sia per la città che per i lunghi viaggi, offre un'esperienza di guida confortevole e sicura.
+    </p>
+
+    <p>
+        Visita il sito ufficiale della <a href="https://www.concessionaria-xyz.it" target="_blank">concessionaria XYZ</a> per maggiori informazioni e offerte speciali.
+    </p>
+
+    <h2>Richiedi Informazioni</h2>
+    <form action="/submit" method="post">
+        <label for="concessionaria">Nome della concessionaria visitata:</label><br>
+        <input type="text" id="concessionaria" name="concessionaria" required><br><br>
+
+        <label>
+            <input type="checkbox" name="consenso" required>
+            Acconsento al trattamento dei dati personali
+        </label><br><br>
+
+        <label for="modello">Modello di interesse:</label><br>
+        <select id="modello" name="modello" required>
+            <option value="base">Base</option>
+            <option value="sport">Sport</option>
+            <option value="luxury">Luxury</option>
+        </select><br><br>
+
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>
