@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+  
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="8">Tabella Voti della classe 3ci</td>
+              </tr>
+          <tr>
+            <th>Nome</th>
+            <th>Matematica</th>
+            <th>Italiano</th>
+            <th>Storia</th>
+            <th>Informatica</th>
+            <th>TPS</th>
+            <th>Inglese</th>
+            <th>Telecomunicazioni</th>
+        </tr>
+        <tr>
+            <td>Achille Russo</td>
+            <td bgcolor="red">4</td>
+            <td>6</td>
+            <td>7</td>
+            <td bgcolor="red">5</td>
+            <td>8</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Alessandro Lezzi</td>
+            <td>7</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="red">3</td>
+            <td>6</td>
+            <td>6</td>
+            <td bgcolor="red">5</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Cristiano Maio</td>
+            <td>6</td>
+            <td bgcolor="red">4</td>
+            <td>7</td>
+            <td>8</td>
+            <td>7</td>
+            <td>6</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Federico Anile </td>
+            <td bgcolor="red">5</td>
+            <td>6</td>
+            <td>6</td>
+            <td>7</td>
+            <td bgcolor="red">4</td>
+            <td bgcolor="red">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td> Pinco Pallino</td>
+            <td>8</td>
+            <td>7</td>
+            <td>6</td>
+            <td>7</td>
+            <td>7</td>
+            <td>6</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Paolo Alfredi</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="red">5</td>
+            <td>6</td>
+            <td bgcolor="red">3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Federico Santoro</td>
+            <td>6</td>
+            <td>7</td>
+            <td bgcolor="red">5</td>
+            <td>6</td>
+            <td>6</td>
+            <td bgcolor="red">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Cielo D'alcamo</td>
+            <td bgcolor="red">4</td>
+            <td>7</td>
+            <td>6</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td bgcolor="red">5</td>
+        </tr>
+    </table>
+</body>
+</html>
