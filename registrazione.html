@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo di Registrazione</title>
+</head>
+<body>
+    <h1>Modulo di Registrazione</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <label for="cognome">Cognome:</label><br>
+        <input type="text" id="cognome" name="cognome" required><br><br>
+
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="data-nascita">Data di nascita:</label><br>
+        <input type="date" id="data-nascita" name="data-nascita" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="regione">Regione:</label><br>
+        <select id="regione" name="regione" required>
+            <option value="">-- Seleziona la tua regione --</option>
+            <option value="abruzzo">Abruzzo</option>
+            <option value="basilicata">Basilicata</option>
+            <option value="calabria">Calabria</option>
+            <option value="campania">Campania</option>
+            <option value="emilia-romagna">Emilia-Romagna</option>
+            <option value="friuli-venezia-giulia">Friuli-Venezia Giulia</option>
+            <option value="lazio">Lazio</option>
+            <option value="liguria">Liguria</option>
+            <option value="lombardia">Lombardia</option>
+            <option value="marche">Marche</option>
+            <option value="molise">Molise</option>
+            <option value="piemonte">Piemonte</option>
+            <option value="puglia">Puglia</option>
+            <option value="sardegna">Sardegna</option>
+            <option value="sicilia">Sicilia</option>
+            <option value="toscana">Toscana</option>
+            <option value="trentino-alto-adige">Trentino-Alto Adige</option>
+            <option value="umbria">Umbria</option>
+            <option value="valle-d-aosta">Valle d'Aosta</option>
+            <option value="veneto">Veneto</option>
+        </select><br><br>
+
+        <label>Genere:</label><br>
+        <input type="radio" id="maschio" name="genere" value="maschio" required>
+        <label for="maschio">Maschio</label><br>
+        <input type="radio" id="femmina" name="genere" value="femmina" required>
+        <label for="femmina">Femmina</label><br><br>
+
+        <label>
+            <input type="checkbox" name="privacy" required>
+            Acconsento al trattamento dei dati personali
+        </label><br><br>
+
+        <label for="note">Note:</label><br>
+        <textarea id="note" name="note" rows="4" cols="50"></textarea><br><br>
+
+        <label for="cv">Invia CV:</label><br>
+        <input type="file" id="cv" name="cv" required><br><br>
+
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>
