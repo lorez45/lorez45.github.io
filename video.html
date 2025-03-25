@@ -1,84 +1,49 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sito con Box Flottanti</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+!DOCTYPE html>
+  <head>
+    <style>
+      #testa {
+        background-color: yellow;
+        height: 200px;
+      }
+      #piede {
+        height: 200px;
+        background-color: purple;
+        clear: both;
+      }
+      #c1 {
+        float: left;
+        height: 500px;
+        background-color: green;
+        width: 15%;
+      }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      flex-direction: column;
-    }
+      #c2 {
+        background-color: blue;
+        height: 500px;
+        float: left;
+        width: 70%;
+       
+      }
 
-    .box {
-      width: 300px;
-      padding: 20px;
-      margin: 10px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      position: absolute;
-    }
-
-    #box1 {
-      top: 50px;
-      left: 50px;
-    }
-
-    #box2 {
-      top: 150px;
-      left: 400px;
-    }
-
-    #box3 {
-      top: 300px;
-      left: 100px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 200px;
-      border-radius: 8px;
-    }
-
-    h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 14px;
-      color: #333;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="box" id="box1">
-    <h2>Box 1</h2>
-    <p>Contenuto generico nel box 1</p>
-  </div>
-
-  <div class="box" id="box2">
-    <h2>Video YouTube</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=HwkD5lRe0jw&list=PLP5MAKLy8lP-a0MG-MFHKCISmj2Wg4vT6" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <div class="box" id="box3">
-    <h2>Box 3</h2>
-    <p>Contenuto generico nel box 3</p>
-  </div>
-
-</body>
+      #c3 {
+        float: right;
+        height: 500px;
+        background-color: red;
+        width: 15%;
+        
+   
+      }
+      iframe{
+        width: 100%;
+    </style>
+  </head>
+  <body>
+    <h1 align="center"><font color="red"> </font></h1>
+    <hr>
+    <div id="testa"></div>
+    <div id="c1"></div>
+    <div id="c2"> <iframe width="560" height="500" src="https://www.youtube.com/embed/TxcJ2drr554?si=i-FfguqBqBhbw4Ya" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>></div>
+    <div id="c3"> TUTORIAL HTML E CSS ITA - Impararlo SUBITO! Corso RAPIDO per principianti in ITALIANO [2020]O</div>
+    <div id="piede"></div>
+  </body>
 </html>
