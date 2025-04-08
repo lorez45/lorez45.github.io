@@ -1,73 +1,55 @@
 <!DOCTYPE html>
-<html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>box flottanti</title>
-    <style>
-<body>         
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: lightgray;
-}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rettangoli</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      box-sizing: border-box;
+      gap: 10px;
+    }
 
-.container {
-    width: 600px;
-    background-color: white;
-    border: 5px solid black;
-    overflow: hidden; /* Per contenere i float */
-}
+    .top,
+    .bottom {
+      height: 40px;
+      border: 1px solid black;
+    }
 
-/* Barra superiore */
-.top {
-    width: 100%;
-    height: 50px;
-    background-color: orange;
-    margin-bottom: 10px;
-}
+    .middle {
+      flex: 1;
+      display: flex;
+      gap: 10px;
+    }
 
-/* Sezione centrale */
-.middle {
-    width: 100%;
-    overflow: hidden; /* Contiene i float */
-}
+    .middle > div {
+      border: 1px solid black;
+    }
 
-.side {
-    width: 50px;
-    height: 150px;
-    margin: 5px;
-}
+    .left,
+    .right {
+      width: 20%;
+    }
 
-.left {
-    float: left;
-    background-color: lightblue;
-}
-
-.center {
-    float: left;
-    width: calc(100% - 120px); /* 600px - (50px*2 + margini) */
-    height: 150px;
-    background-color: blue;
-    margin: 5px;
-}
-
-.right {
-    float: right;
-    background-color: purple;
-}
-
-/* Barra inferiore */
-.bottom {
-    width: 100%;
-    height: 50px;
-    background-color: yellowgreen;
-    margin-top: 10px;
-    clear: both; /* Evita problemi con i float */
-}
-</style>
+    .center {
+      flex: 1;
+    }
+  </style>
 </head>
+<body>
+  <div class="container">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="left"></div>
+      <div class="center"></div>
+      <div class="right"></div>
+    </div>
+    <div class="bottom"></div>
+  </div>
 </body>
-        
+</html>
