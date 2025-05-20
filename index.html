@@ -1,23 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-     <link rel= "icon" type="image/x-icon" href="./img/icons8-favicon-48.png">
-  </head>
-  <body>
-    <h1> sito di Lorenzo Splinchi
-    <h2> ad uso didattico</h2>
-    <p><a href="intestazioni.html"> intestazioni</a>
-    <p><a href="paragrafi.html"> paragrafi</a>
-    <p><a href="lista.html"> lista</a>
-    <p><a href="provetesto.html"> provetesto</a>
-    <p><a href="tabella.html"> tabella</a>
-    <p><a href="immagine.html"> immagine</a>  
-    <p><a href="registrazione.html"> registrazione</a>
-    <p><a href="conclusione.html"> conclusione</a>
-    <p><a href="ricetta.html"> ricetta</a>
-    <p><a href="tabellasfondogrigio"> tabellasfondogrigio</a>
-    <p><a href="boxflottanti.html"> boxflottanti</a> 
-    <p><a href="video.html"> video</a> 
-    <p><a href="modelbootstrap.html"> modelbootstrap</a>
-  </body>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il mio GitHub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: #24292e;
+      font-weight: bold;
+      border: 2px solid #24292e;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .links a:hover {
+      background-color: #24292e;
+      color: white;
+    }
+    .github-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ciao, sono [Il tuo nome]</h1>
+    <p>Benvenuto nel mio spazio GitHub</p>
+    
+    <div class="links">
+      <a href="https://github.com/tuo-nome-utente" target="_blank">
+        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub">
+        GitHub Principale
+      </a>
+      <a href="https://github.com/tuo-nome-utente/progetto1" target="_blank">
+        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub">
+        Progetto 1
+      </a>
+      <!-- Aggiungi altri link se vuoi -->
+    </div>
+  </div>
+</body>
 </html>
