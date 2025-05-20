@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>I miei progetti GitHub</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,62 +26,69 @@
     }
 
     .container {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      width: 90%;
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
       max-width: 600px;
+      width: 95%;
+      text-align: center;
     }
 
     h1 {
-      margin-bottom: 20px;
-      color: #333;
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #222;
     }
 
     p {
-      color: #666;
+      font-size: 16px;
       margin-bottom: 30px;
+      color: #666;
     }
 
     .links {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 12px;
     }
 
     .links a {
-      text-decoration: none;
-      color: #24292e;
-      font-weight: 500;
-      border: 2px solid #24292e;
-      border-radius: 6px;
-      padding: 10px;
-      transition: all 0.3s ease;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background-color: #24292e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .links a:hover {
-      background-color: #24292e;
-      color: white;
+      background-color: #3f3f46;
+      transform: translateY(-2px);
     }
 
     .github-icon {
       width: 20px;
       height: 20px;
-      margin-right: 8px;
-      vertical-align: middle;
-      fill: currentColor;
+      filter: invert(100%);
+    }
+
+    @media (min-width: 480px) {
+      .links {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Ciao, sono [Il tuo nome]</h1>
-    <p>Qui trovi i miei progetti su GitHub</p>
+    <p>Scopri i miei progetti su GitHub</p>
 
     <div class="links">
       <a href="https://github.com/tuo-utente/progetto1" target="_blank">
@@ -117,4 +134,5 @@
   </div>
 </body>
 </html>
+
 
