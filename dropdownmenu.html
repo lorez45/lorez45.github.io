@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width-device-width, initial-scale=1.0" />
+<title,Document</title>
+</head>
+<style>
+@import url("./css/torna-indietro-btn.css");
+
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 100vh;
+background-color: #121212;
+color: #fff;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+position: relative;
+}
+
+#dropdown {
+position: absolute;
+top: 100%;
+left: 0;
+display: none;
+}
+
+#dropdown-content {
+background-color: #333;
+padding: 10px;
+}
+
+
+#dropdown-content a {
+display: block;
+margin-bottom: 5px;
+color: #fff;
+text-decoration: none;
+}
+
+
+#dropdown-content a:hover {
+text-decoration: underline;
+}
+
+  
+button {
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+}
+
+
+button:hover {
+backeround-color: #555;
+}
+</style>
+</head>
+
+
+  <body>
+<a class="torna-indietro-btn" href="./index.html">Torna alla home</a>
+<nav>
+<button>Apri dropdown</button>
+<div id="dropdown">
+<div id="dropdown-content">
+<a href="#">Prova 1</a>
+<a href="#">Prova 2</a>
+<a href="#">Prova 3</a>
+</div>
+</div>
+</nav>
+</body>
+
+
+<script>
+const button = document.querySelector("button");
+const dropdown = document.querySelector("div");
+let isVisible = false;
+button.addEventListener("click", ()=> {
+dropdown.style.display = isVisible ? "none" : "block";
+isVisible =! isVisible;
+});
+
+
+document.addEventListener("click", (e) => {
+if (!dropdown.contains(e.target) && !e.target.matches("button")) {
+dropdown.style.display "none";
+isVisible = false;
+}
+});
+</script>
+</html>
