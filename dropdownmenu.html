@@ -38,7 +38,7 @@ isVisible =! isVisible;
 
 document.addEventListener("click", (e) => {
 if (!dropdown.contains(e.target) && !e.target.matches("button")) {
-dropdown.style.display "none";
+dropdown.style.display = "none";
 isVisible = false;
 }
 });
