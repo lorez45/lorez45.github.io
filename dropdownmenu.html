@@ -5,42 +5,104 @@
 <title>Document</title>
 <head>
   <style>
-  #dropdown-content {
-    display: none;
-  }
-</style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      position: relative;
+      display: inline-block;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      z-index: 1;
+      margin-top: 10px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    #dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+
+    #dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    #dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .torna-indietro-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
-  <body>
-<a class="torna-indietro-btn" href="./index.html">Torna alla home</a>
-<nav>
-<button>Apri dropdown</button>
-<div id="dropdown">
-<div id="dropdown-content">
-<a href="#">Prova 1</a>
-<a href="#">Prova 2</a>
-<a href="#">Prova 3</a>
-</div>
-</div>
-</nav>
+<body>
+  <a class="torna-indietro-btn" href="./index.html">Torna alla home</a>
+  <nav>
+    <button>Apri dropdown</button>
+    <div id="dropdown">
+      <div id="dropdown-content">
+        <a href="#">Prova 1</a>
+        <a href="#">Prova 2</a>
+        <a href="#">Prova 3</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const button = document.querySelector("button");
+    const dropdown = document.querySelector("#dropdown-content");
+    let isVisible = false;
+
+    button.addEventListener("click", () => {
+      dropdown.style.display = isVisible ? "none" : "block";
+      isVisible = !isVisible;
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target) && !e.target.matches("button")) {
+        dropdown.style.display = "none";
+        isVisible = false;
+      }
+    });
+  </script>
 </body>
-
-
-<script>
-const button = document.querySelector("button");
-const dropdown = document.querySelector("#dropdown-content");
-let isVisible = false;
-button.addEventListener("click", ()=> {
-dropdown.style.display = isVisible ? "none" : "block";
-isVisible =! isVisible;
-});
-
-
-document.addEventListener("click", (e) => {
-if (!dropdown.contains(e.target) && !e.target.matches("button")) {
-dropdown.style.display = "none";
-isVisible = false;
-}
-});
-</script>
 </html>
