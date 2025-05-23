@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Descrizione Automobile</title>
     <style>
-        /* Reset leggero */
         * {
             box-sizing: border-box;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #f0f0f0; /* testo chiaro */
+            background-color: #eaf6fb;
+            color: #333;
             margin: 0;
             padding: 20px;
             line-height: 1.6;
         }
 
         h1, h2 {
-            color: #e0e8ff; /* titoli chiari */
+            color: #1a3e5d;
         }
 
         h1 {
@@ -30,7 +29,7 @@
         }
 
         h2 {
-            border-bottom: 2px solid #a0c4ff; /* linea più chiara */
+            border-bottom: 2px solid #79accd;
             padding-bottom: 0.3em;
             margin-top: 2em;
         }
@@ -48,24 +47,24 @@
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 2em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            background-color: rgba(0,0,0,0.3); /* sfondo tabella scuro semitrasparente */
-            color: #f0f0f0; /* testo chiaro */
+            background-color: #ffffff;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         table th, table td {
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid #ccc;
             padding: 12px 15px;
             text-align: center;
         }
 
         table thead {
-            background-color: rgba(41, 128, 185, 0.8);
-            color: #fff;
+            background-color: #d0e7f5;
+            color: #1a3e5d;
         }
 
         table tbody tr:nth-child(even) {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #f5fbfe;
         }
 
         ul {
@@ -73,17 +72,16 @@
             padding-left: 1.2em;
             max-width: 400px;
             margin-bottom: 2em;
-            color: #f0f0f0; /* testo chiaro */
+            color: #333;
         }
 
         p {
             max-width: 700px;
             margin-bottom: 1.2em;
-            color: #f0f0f0; /* testo chiaro */
         }
 
         a {
-            color: #a8d0ff; /* link chiari */
+            color: #2980b9;
             text-decoration: none;
         }
 
@@ -93,7 +91,7 @@
 
         form {
             max-width: 400px;
-            background: rgba(255, 255, 255, 0.9); /* sfondo chiaro per leggibilità */
+            background: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -105,7 +103,6 @@
             display: block;
             margin-bottom: 6px;
             margin-top: 12px;
-            color: #333; /* testo scuro nel form */
         }
 
         input[type="text"],
@@ -154,7 +151,7 @@
     <img src="https://via.placeholder.com/600x400" alt="Immagine dell'automobile" width="600" />
 
     <h2>Prezzi per Modello e Tipologia di Alimentazione</h2>
-    <table border="1">
+    <table>
         <thead>
             <tr>
                 <th>Modello</th>
@@ -206,23 +203,22 @@
 
     <h2>Richiedi Informazioni</h2>
     <form action="/submit" method="post">
-        <label for="concessionaria">Nome della concessionaria visitata:</label><br />
-        <input type="text" id="concessionaria" name="concessionaria" required /><br /><br />
+        <label for="concessionaria">Nome della concessionaria visitata:</label>
+        <input type="text" id="concessionaria" name="concessionaria" required />
 
         <label>
             <input type="checkbox" name="consenso" required />
             Acconsento al trattamento dei dati personali
-        </label><br /><br />
+        </label>
 
-        <label for="modello">Modello di interesse:</label><br />
+        <label for="modello">Modello di interesse:</label>
         <select id="modello" name="modello" required>
             <option value="base">Base</option>
             <option value="sport">Sport</option>
             <option value="luxury">Luxury</option>
-        </select><br /><br />
+        </select>
 
         <button type="submit">Invia</button>
     </form>
 </body>
 </html>
-
