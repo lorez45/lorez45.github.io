@@ -12,16 +12,43 @@
     }
 
     .styled-text {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-top: 50px;
+    }
+
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .label {
+      font-size: 1rem;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <div class="styled-text">
-    ciao <i>corsivo</i>
-    <b>ciao</b>
-    <s>ciao</s>
-    <u>ciao</u>
+    <div class="text-block">
+      <div class="label">Corsivo</div>
+      <i>ciao</i>
+    </div>
+    <div class="text-block">
+      <div class="label">Grassetto</div>
+      <b>ciao</b>
+    </div>
+    <div class="text-block">
+      <div class="label">Barrato</div>
+      <s>ciao</s>
+    </div>
+    <div class="text-block">
+      <div class="label">Sottolineato</div>
+      <u>ciao</u>
+    </div>
   </div>
 </body>
 </html>
