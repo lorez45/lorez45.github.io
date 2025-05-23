@@ -12,21 +12,9 @@
       background-color: #eaf6fb;
       color: #0077b6;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .home-button {
-      background-color: black;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 5px;
-      display: inline-block;
-      margin: 20px;
-    }
-
-    .home-button:hover {
-      background-color: #2980b9;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 60px; /* spazio per il bottone */
     }
 
     .header {
@@ -38,33 +26,52 @@
     h1, h3 {
       color: #0077b6;
     }
+
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: transparent;
+      color: #0077b6;
+      border: 2px solid #0077b6;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #0077b6;
+      color: white;
+    }
   </style>
 </head>
 
 <body>
 
 <div class="container-fluid header">
-  <a href="https://federico892.github.io" class="home-button">🏠 Torna alla Home</a>
   <h1>Energia Rinnovabile</h1>
-  <p>Utilizzando il framework Bootstrap 5</p> 
 </div>
 
 <div class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
       <h3>Storia</h3>
-      <p>L’uso dell’energia rinnovabile risale a migliaia di anni fa, quando l’umanità sfruttava il vento per la navigazione e il sole per il riscaldamento. Tuttavia, lo sviluppo industriale ha privilegiato i combustibili fossili. Solo negli ultimi decenni, con l’aumento della consapevolezza ambientale e l’urgenza del cambiamento climatico, le fonti rinnovabili come il solare, l’eolico e l’idroelettrico sono tornate al centro dell’attenzione globale, grazie anche al miglioramento delle tecnologie e ai costi sempre più competitivi.</p>
+      <p>L’uso dell’energia rinnovabile risale a migliaia di anni fa, quando l’umanità sfruttava il vento per la navigazione e il sole per il riscaldamento...</p>
     </div>
     <div class="col-sm-4">
       <h3>Vantaggi</h3>
-      <p>L’energia rinnovabile è sostenibile, non emette gas serra durante la produzione e riduce la dipendenza da risorse finite. Favorisce l’innovazione tecnologica, crea nuovi posti di lavoro e migliora la qualità dell’aria e dell’ambiente. È anche una risorsa strategica per l’indipendenza energetica dei Paesi. Investire nelle rinnovabili significa investire in un futuro più pulito e resiliente.</p>
+      <p>L’energia rinnovabile è sostenibile, non emette gas serra durante la produzione e riduce la dipendenza da risorse finite...</p>
     </div>
     <div class="col-sm-4">
       <h3>Svantaggi</h3>
-      <p>Le fonti rinnovabili non sono prive di problemi: la produzione di energia solare ed eolica è intermittente e dipende dalle condizioni meteo. Gli impianti possono avere un impatto sul paesaggio e sulla fauna locale. Inoltre, l’accumulo di energia richiede batterie avanzate ancora costose e difficili da smaltire. Nonostante questi limiti, i vantaggi superano di gran lunga gli svantaggi se gestiti correttamente.</p>
+      <p>Le fonti rinnovabili non sono prive di problemi: la produzione di energia solare ed eolica è intermittente...</p>
     </div>
   </div>
 </div>
+
+<a href="https://lorez45.github.io" class="home-button">Torna alla Home</a>
 
 </body>
 </html>
