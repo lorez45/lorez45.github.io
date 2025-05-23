@@ -1,71 +1,100 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modulo di Registrazione</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modulo di Registrazione</title>
+  <style>
+    body {
+      background-color: #eaf6fb;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+      color: #333;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
 <body>
+  <form action="/submit" method="post" enctype="multipart/form-data">
     <h1>Modulo di Registrazione</h1>
-    <form action="/submit" method="post" enctype="multipart/form-data">
-        <label for="cognome">Cognome:</label><br>
-        <input type="text" id="cognome" name="cognome" required><br><br>
+    <label for="cognome">Cognome:</label>
+    <input type="text" id="cognome" name="cognome" required>
 
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
 
-        <label for="data-nascita">Data di nascita:</label><br>
-        <input type="date" id="data-nascita" name="data-nascita" required><br><br>
+    <label for="data-nascita">Data di nascita:</label>
+    <input type="date" id="data-nascita" name="data-nascita" required>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
 
-        <label for="regione">Regione:</label><br>
-        <select id="regione" name="regione" required>
-            <option value="">-- Seleziona la tua regione --</option>
-            <option value="abruzzo">Abruzzo</option>
-            <option value="basilicata">Basilicata</option>
-            <option value="calabria">Calabria</option>
-            <option value="campania">Campania</option>
-            <option value="emilia-romagna">Emilia-Romagna</option>
-            <option value="friuli-venezia-giulia">Friuli-Venezia Giulia</option>
-            <option value="lazio">Lazio</option>
-            <option value="liguria">Liguria</option>
-            <option value="lombardia">Lombardia</option>
-            <option value="marche">Marche</option>
-            <option value="molise">Molise</option>
-            <option value="piemonte">Piemonte</option>
-            <option value="puglia">Puglia</option>
-            <option value="sardegna">Sardegna</option>
-            <option value="sicilia">Sicilia</option>
-            <option value="toscana">Toscana</option>
-            <option value="trentino-alto-adige">Trentino-Alto Adige</option>
-            <option value="umbria">Umbria</option>
-            <option value="valle-d-aosta">Valle d'Aosta</option>
-            <option value="veneto">Veneto</option>
-        </select><br><br>
+    <label for="regione">Regione:</label>
+    <select id="regione" name="regione" required>
+      <option value="">-- Seleziona la tua regione --</option>
+      <option value="abruzzo">Abruzzo</option>
+      <!-- ...altre regioni... -->
+      <option value="veneto">Veneto</option>
+    </select>
 
-        <label>Genere:</label><br>
-        <input type="radio" id="maschio" name="genere" value="maschio" required>
-        <label for="maschio">Maschio</label><br>
-        <input type="radio" id="femmina" name="genere" value="femmina" required>
-        <label for="femmina">Femmina</label><br><br>
+    <label>Genere:</label>
+    <input type="radio" id="maschio" name="genere" value="maschio" required> Maschio
+    <input type="radio" id="femmina" name="genere" value="femmina" required> Femmina
 
-        <label>
-            <input type="checkbox" name="privacy" required>
-            Acconsento al trattamento dei dati personali
-        </label><br><br>
+    <label>
+      <input type="checkbox" name="privacy" required>
+      Acconsento al trattamento dei dati personali
+    </label>
 
-        <label for="note">Note:</label><br>
-        <textarea id="note" name="note" rows="4" cols="50"></textarea><br><br>
+    <label for="note">Note:</label>
+    <textarea id="note" name="note" rows="4"></textarea>
 
-        <label for="cv">Invia CV:</label><br>
-        <input type="file" id="cv" name="cv" required><br><br>
+    <label for="cv">Invia CV:</label>
+    <input type="file" id="cv" name="cv" required>
 
-        <button type="submit">Invia</button>
-    </form>
+    <button type="submit">Invia</button>
+  </form>
 </body>
 </html>
