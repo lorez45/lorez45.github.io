@@ -1,104 +1,63 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-  
+  <meta charset="UTF-8">
+  <title>Tabella Voti</title>
+  <style>
+    body {
+      background-color: #eaf6fb;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 95%;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: white;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #00b4d8;
+      color: white;
+    }
+
+    td[colspan] {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background-color: #0077b6;
+      color: white;
+    }
+
+    td[bgcolor="red"] {
+      background-color: #f87171 !important;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td colspan="8">Tabella Voti della classe 3ci</td>
-              </tr>
-          <tr>
-            <th>Nome</th>
-            <th>Italiano</th>
-            <th>Informatica</th>
-            <th>Inglese</th>
-            <th>Matematica</th>
-            <th>Telecomunicazioni</th>
-            <th>TPS</th>
-            <th>Storia</th>
-        </tr>
-        <tr>
-            <td>Lorenzo Splinchi</td>
-            <td>8</td>
-            <td bgcolor="red">4</td>
-            <td>6</td>
-            <td bgcolor="red">3</td>
-            <td>9</td>
-            <td>8</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>Federico Anile</td>
-            <td>6</td>
-            <td>8</td>
-            <td>7</td>
-            <td bgcolor="red">4</td>
-            <td>9</td>
-            <td bgcolor="red">3</td>
-            <td bgcolor="red">5</td>
-        </tr>
-        <tr>
-            <td>Reij Moschella</td>
-            <td bgcolor="red">5</td>
-            <td>8</td>
-            <td bgcolor="red">4</td>
-            <td>6</td>
-            <td bgcolor="red">5</td>
-            <td>9</td>
-            <td>7</td>
-        </tr>
-        <tr>
-            <td>Alessandro Mariani</td>
-            <td>8</td>
-            <td>7</td>
-            <td bgcolor="red">3</td>
-            <td>9</td>
-            <td>6</td>
-            <td>7</td>
-            <td bgcolor="red">4</td>
-        </tr>
-        <tr>
-            <td>Achille Russo</td>
-            <td bgcolor="red">3</td>
-            <td bgcolor="red">5</td>
-            <td bgcolor="red">4</td>
-            <td bgcolor="red">5</td>
-            <td bgcolor="red">5</td>
-            <td>7</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>Erica Bonalumi</td>
-            <td>6</td>
-            <td>8</td>
-            <td>9</td>
-            <td>7</td>
-            <td>7</td>
-            <td>8</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>Alessio Capuni</td>
-            <td bgcolor="red">4</td>
-            <td>8</td>
-            <td bgcolor="red">5</td>
-            <td bgcolor="red">3</td>
-            <td>8</td>
-            <td bgcolor="red">5</td>
-            <td bgcolor="red">4</td>
-        </tr>
-        <tr>
-            <td>Cristiano Maio</td>
-            <td bgcolor="red">4</td>
-            <td bgcolor="red">3</td>
-            <td>6</td>
-            <td>6</td>
-            <td bgcolor="red">5</td>
-            <td>8</td>
-            <td>6</td>
-        </tr>
-    </table>
+  <table>
+    <tr>
+      <td colspan="8">Tabella Voti della classe 3ci</td>
+    </tr>
+    <tr>
+      <th>Nome</th>
+      <th>Italiano</th>
+      <th>Informatica</th>
+      <th>Inglese</th>
+      <th>Matematica</th>
+      <th>Telecomunicazioni</th>
+      <th>TPS</th>
+      <th>Storia</th>
+    </tr>
+    <!-- Aggiungi qui tutte le righe studente come da codice originale -->
+  </table>
 </body>
 </html>
