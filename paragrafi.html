@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stile con Gradiente</title>
   <style>
-    /* Sfondo gradiente per tutto il body */
     body {
       background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #f0f0f5; /* testo chiaro per contrasto */
+      color: #f0f0f5;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 40px 20px;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* centra testi */
     }
 
-    /* Titoli h1-h6 con differenze di dimensione e colore */
     h1, h2, h3, h4, h5, h6 {
       margin: 0 0 12px 0;
       font-weight: 700;
@@ -57,17 +59,20 @@
       font-weight: 400;
     }
 
-    /* Paragrafi */
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+    /* Box contenitore per i paragrafi */
+    .paragraph-box {
+      background: rgba(255, 255, 255, 0.15); /* bianco semi-trasparente */
+      border-radius: 15px;
+      padding: 20px 30px;
       max-width: 600px;
-      margin-bottom: 1em;
+      margin: 10px auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
       color: #e0e0e0;
       text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
-    /* Linea orizzontale */
     hr {
       border: none;
       height: 2px;
@@ -90,9 +95,8 @@
   <hr>
 
   <h1>Paragrafi</h1>
-  <p>Paragrafo 1</p>
-  <p>Paragrafo 2</p>
-  <p>Paragrafo 3</p>
+  <div class="paragraph-box">Paragrafo 1</div>
+  <div class="paragraph-box">Paragrafo 2</div>
+  <div class="paragraph-box">Paragrafo 3</div>
 </body>
 </html>
-
