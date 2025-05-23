@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-<head><title> TESTA DEL DOCUMENTO</title>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>TESTA DEL DOCUMENTO</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #f0f0f5;
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      padding: 0;
+      text-align: center;
+    }
+
+    ul, ol {
+      max-width: 400px;
+      margin: 20px auto;
+      padding-left: 40px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-align: left;
+      color: #f0f0f5;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    ul li, ol li {
+      margin: 8px 0;
+    }
+
+    ul[type="circle"] {
+      list-style-type: circle;
+    }
+
+    ol[type="I"] {
+      list-style-type: upper-roman;
+    }
+
+    ul ul {
+      margin-top: 5px;
+      padding-left: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+    }
+  </style>
 </head>
-<ul type="circle">
-<li>nome 1 </li>
-<li>nome 2 </li>
-<li>nome 3 </li>
-</ul>
-<ol type="I">
-<li>nome 1 </li>
-        <ul type="circle">
+<body>
+  <ul type="circle">
+    <li>nome 1</li>
+    <li>nome 2</li>
+    <li>nome 3</li>
+  </ul>
+  <ol type="I">
+    <li>nome 1
+      <ul type="circle">
         <li>prova1</li>
         <li>prova2</li>
-        </ul>
-<li>nome 2 </li>
-<li>nome 3 </li>
-</ol>
+      </ul>
+    </li>
+    <li>nome 2</li>
+    <li>nome 3</li>
+  </ol>
 </body>
+</html>
