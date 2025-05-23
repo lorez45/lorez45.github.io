@@ -20,36 +20,37 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
-    .container, .altervista-box {
+    .section {
       background: #ffffff;
       padding: 40px 30px;
       border-radius: 18px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      max-width: 700px;
+      max-width: 900px;
       width: 100%;
-      text-align: center;
       margin-bottom: 40px;
     }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 15px;
+    .section h1 {
+      font-size: 34px;
       color: #124559;
+      margin-bottom: 10px;
     }
 
-    p {
+    .section p {
       font-size: 18px;
-      margin-bottom: 35px;
       color: #4a4a4a;
+      margin-bottom: 30px;
     }
 
     .links {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
     }
 
     .links a {
@@ -57,11 +58,11 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 24px;
+      padding: 14px 20px;
       background-color: #1565c0;
       color: #fff;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: 600;
       font-size: 15px;
       transition: background 0.3s, transform 0.2s;
@@ -78,10 +79,11 @@
       filter: invert(100%);
     }
 
-    @media (min-width: 600px) {
-      .links {
-        grid-template-columns: 1fr 1fr;
-      }
+    .altervista-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .altervista-link {
@@ -90,8 +92,9 @@
       color: white;
       font-weight: bold;
       text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 10px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 16px;
       transition: background-color 0.3s ease;
     }
 
@@ -101,11 +104,11 @@
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <div class="section">
     <h1>Sito di Lorenzo Splinchi</h1>
     <p>Scopri i miei progetti su GitHub</p>
     <div class="links">
-      <!-- Link ai progetti GitHub -->
       <a href="intestazioni.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> I. intestazioni</a>
       <a href="paragrafi.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> II. paragrafi</a>
       <a href="lista.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> III. lista</a>
@@ -123,10 +126,11 @@
     </div>
   </div>
 
-  <div class="altervista-box">
+  <div class="section altervista-box">
     <h1>Visita anche il mio sito su Altervista</h1>
     <p>Clicca qui per accedere al sito ospitato su Altervista:</p>
     <a class="altervista-link" href="https://lorez45.altervista.org" target="_blank">Vai al sito Altervista</a>
   </div>
+
 </body>
 </html>
