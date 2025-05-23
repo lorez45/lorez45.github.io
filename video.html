@@ -1,49 +1,71 @@
-!DOCTYPE html>
-  <head>
-    <style>
-      #testa {
-        background-color: yellow;
-        height: 200px;
-      }
-      #piede {
-        height: 200px;
-        background-color: purple;
-        clear: both;
-      }
-      #c1 {
-        float: left;
-        height: 500px;
-        background-color: green;
-        width: 15%;
-      }
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout con Video</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #eaf6fb;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-      #c2 {
-        background-color: blue;
-        height: 500px;
-        float: left;
-        width: 70%;
-       
-      }
+    #testa, #piede {
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-      #c3 {
-        float: right;
-        height: 500px;
-        background-color: red;
-        width: 15%;
-        
-   
-      }
-      iframe{
-        width: 100%;
-    </style>
-  </head>
-  <body>
-    <h1 align="center"><font color="red"> </font></h1>
-    <hr>
-    <div id="testa"></div>
-    <div id="c1"></div>
-    <div id="c2"> <iframe width="560" height="500" src="https://www.youtube.com/embed/TxcJ2drr554?si=i-FfguqBqBhbw4Ya" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>></div>
-    <div id="c3"> TUTORIAL HTML E CSS ITA - Impararlo SUBITO! Corso RAPIDO per principianti in ITALIANO [2020]</div>
-    <div id="piede"></div>
-  </body>
+    #c1, #c2, #c3 {
+      float: left;
+      height: 500px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #c1 {
+      background-color: #a2d5f2;
+      width: 15%;
+    }
+
+    #c2 {
+      background-color: #ffffff;
+      width: 70%;
+    }
+
+    #c3 {
+      background-color: #f7c59f;
+      width: 15%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div id="testa">Intestazione</div>
+
+  <div id="c1">Menu</div>
+
+  <div id="c2">
+    <iframe src="https://www.youtube.com/embed/TxcJ2drr554?si=i-FfguqBqBhbw4Ya" allowfullscreen></iframe>
+  </div>
+
+  <div id="c3">
+    <strong>Tutorial:</strong><br> HTML E CSS ITA - Impararlo SUBITO! Corso RAPIDO per principianti in ITALIANO [2020]
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div id="piede">Piè di pagina</div>
+</body>
 </html>
