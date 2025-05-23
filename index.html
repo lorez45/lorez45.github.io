@@ -18,10 +18,7 @@
       background-color: #eaf6fb;
       color: #1e1e1e;
       padding: 50px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -29,12 +26,20 @@
       font-size: 36px;
       color: #124559;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     p {
       font-size: 20px;
       color: #4a4a4a;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
     .project-box {
@@ -48,9 +53,8 @@
       border-radius: 12px;
       font-weight: 600;
       font-size: 18px;
-      margin-bottom: 16px;
-      width: 100%;
       transition: background-color 0.3s ease, transform 0.2s ease;
+      min-width: 0; /* per evitare overflow testo */
     }
 
     .project-box:hover {
@@ -62,6 +66,7 @@
       width: 24px;
       height: 24px;
       filter: invert(100%);
+      flex-shrink: 0;
     }
 
     .altervista-box {
@@ -70,7 +75,7 @@
       border-radius: 18px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       margin-top: 50px;
-      width: 100%;
+      text-align: center;
     }
 
     .altervista-link {
@@ -96,23 +101,23 @@
   <h1>Sito di Lorenzo Splinchi</h1>
   <p>Scopri i miei progetti su GitHub</p>
 
-  <!-- Progetti GitHub -->
-  <a class="project-box" href="intestazioni.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> I. intestazioni</a>
-  <a class="project-box" href="paragrafi.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> II. paragrafi</a>
-  <a class="project-box" href="lista.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> III. lista</a>
-  <a class="project-box" href="provetesto.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> IV. provetesto</a>
-  <a class="project-box" href="immagine.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> V. immagine</a>
-  <a class="project-box" href="tabella.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VI. tabella</a>
-  <a class="project-box" href="conclusione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VII. conclusione</a>
-  <a class="project-box" href="registrazione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VIII. registrazione</a>
-  <a class="project-box" href="tabellasfondogrigio.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> IX. tabella sfondo grigio</a>
-  <a class="project-box" href="ricetta.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> X. ricetta</a>
-  <a class="project-box" href="bootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XI. bootstrap</a>
-  <a class="project-box" href="video.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XII. video</a>
-  <a class="project-box" href="modelbootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XIII. modello bootstrap</a>
-  <a class="project-box" href="dropdownmenu.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XIV. dropdown menù</a>
+  <div class="projects-grid">
+    <a class="project-box" href="intestazioni.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> I. intestazioni</a>
+    <a class="project-box" href="paragrafi.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> II. paragrafi</a>
+    <a class="project-box" href="lista.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> III. lista</a>
+    <a class="project-box" href="provetesto.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> IV. provetesto</a>
+    <a class="project-box" href="immagine.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> V. immagine</a>
+    <a class="project-box" href="tabella.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VI. tabella</a>
+    <a class="project-box" href="conclusione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VII. conclusione</a>
+    <a class="project-box" href="registrazione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VIII. registrazione</a>
+    <a class="project-box" href="tabellasfondogrigio.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> IX. tabella sfondo grigio</a>
+    <a class="project-box" href="ricetta.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> X. ricetta</a>
+    <a class="project-box" href="bootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XI. bootstrap</a>
+    <a class="project-box" href="video.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XII. video</a>
+    <a class="project-box" href="modelbootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XIII. modello bootstrap</a>
+    <a class="project-box" href="dropdownmenu.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XIV. dropdown menù</a>
+  </div>
 
-  <!-- Altervista -->
   <div class="altervista-box">
     <h1>Visita anche il mio sito su Altervista</h1>
     <p>Clicca qui per accedere al sito ospitato su Altervista:</p>
