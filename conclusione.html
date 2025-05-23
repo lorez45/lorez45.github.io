@@ -12,15 +12,15 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);;
-            color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #f0f0f0; /* testo chiaro */
             margin: 0;
             padding: 20px;
             line-height: 1.6;
         }
 
         h1, h2 {
-            color: #2c3e50;
+            color: #e0e8ff; /* titoli chiari */
         }
 
         h1 {
@@ -30,7 +30,7 @@
         }
 
         h2 {
-            border-bottom: 2px solid #2980b9;
+            border-bottom: 2px solid #a0c4ff; /* linea più chiara */
             padding-bottom: 0.3em;
             margin-top: 2em;
         }
@@ -48,22 +48,24 @@
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 2em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background-color: rgba(0,0,0,0.3); /* sfondo tabella scuro semitrasparente */
+            color: #f0f0f0; /* testo chiaro */
         }
 
         table th, table td {
-            border: 1px solid #ddd;
+            border: 1px solid rgba(255,255,255,0.3);
             padding: 12px 15px;
             text-align: center;
         }
 
         table thead {
-            background-color: #2980b9;
+            background-color: rgba(41, 128, 185, 0.8);
             color: #fff;
         }
 
         table tbody tr:nth-child(even) {
-            background-color: #f2f7fb;
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         ul {
@@ -71,15 +73,17 @@
             padding-left: 1.2em;
             max-width: 400px;
             margin-bottom: 2em;
+            color: #f0f0f0; /* testo chiaro */
         }
 
         p {
             max-width: 700px;
             margin-bottom: 1.2em;
+            color: #f0f0f0; /* testo chiaro */
         }
 
         a {
-            color: #2980b9;
+            color: #a8d0ff; /* link chiari */
             text-decoration: none;
         }
 
@@ -89,10 +93,11 @@
 
         form {
             max-width: 400px;
-            background: white;
+            background: rgba(255, 255, 255, 0.9); /* sfondo chiaro per leggibilità */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: #333;
         }
 
         label {
@@ -100,6 +105,7 @@
             display: block;
             margin-bottom: 6px;
             margin-top: 12px;
+            color: #333; /* testo scuro nel form */
         }
 
         input[type="text"],
