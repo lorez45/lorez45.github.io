@@ -1,52 +1,79 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Tabella Voti</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabella Voti - 3CI</title>
   <style>
     body {
       background-color: #eaf6fb;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
 
     table {
       border-collapse: collapse;
-      width: 95%;
-      margin: 20px auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 1000px;
       background: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
     }
 
     th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
     }
 
     th {
-      background-color: #00b4d8;
+      background-color: #3498db;
       color: white;
+      font-size: 1rem;
+      letter-spacing: 1px;
     }
 
-    td[colspan] {
-      font-size: 1.5rem;
+    tr:nth-child(even) {
+      background-color: #f8fafd;
+    }
+
+    td.red {
+      background-color: #f8d7da;
+      color: #c0392b;
       font-weight: bold;
-      background-color: #0077b6;
-      color: white;
     }
 
-    td[bgcolor="red"] {
-      background-color: #f87171 !important;
-      color: white;
+    td:first-child {
+      font-weight: bold;
+    }
+
+    caption {
+      caption-side: top;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
+
+  <h1>Tabella Voti - Classe 3CI</h1>
+
   <table>
-    <tr>
-      <td colspan="8">Tabella Voti della classe 3ci</td>
-    </tr>
+    <caption>Rendiconto voti degli studenti</caption>
     <tr>
       <th>Nome</th>
       <th>Italiano</th>
@@ -57,7 +84,103 @@
       <th>TPS</th>
       <th>Storia</th>
     </tr>
-    <!-- Aggiungi qui tutte le righe studente come da codice originale -->
+
+    <!-- Studente 1 -->
+    <tr>
+      <td>Lorenzo Splinchi</td>
+      <td>8</td>
+      <td class="red">4</td>
+      <td>6</td>
+      <td class="red">3</td>
+      <td>9</td>
+      <td>8</td>
+      <td>6</td>
+    </tr>
+
+    <!-- Studente 2 -->
+    <tr>
+      <td>Federico Anile</td>
+      <td>6</td>
+      <td>8</td>
+      <td>7</td>
+      <td class="red">4</td>
+      <td>9</td>
+      <td class="red">3</td>
+      <td class="red">5</td>
+    </tr>
+
+    <!-- Studente 3 -->
+    <tr>
+      <td>Reij Moschella</td>
+      <td class="red">5</td>
+      <td>8</td>
+      <td class="red">4</td>
+      <td>6</td>
+      <td class="red">5</td>
+      <td>9</td>
+      <td>7</td>
+    </tr>
+
+    <!-- Studente 4 -->
+    <tr>
+      <td>Alessandro Mariani</td>
+      <td>8</td>
+      <td>7</td>
+      <td class="red">3</td>
+      <td>9</td>
+      <td>6</td>
+      <td>7</td>
+      <td class="red">4</td>
+    </tr>
+
+    <!-- Studente 5 -->
+    <tr>
+      <td>Achille Russo</td>
+      <td class="red">3</td>
+      <td class="red">5</td>
+      <td class="red">4</td>
+      <td class="red">5</td>
+      <td class="red">5</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+
+    <!-- Studente 6 -->
+    <tr>
+      <td>Erica Bonalumi</td>
+      <td>6</td>
+      <td>8</td>
+      <td>9</td>
+      <td>7</td>
+      <td>7</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+
+    <!-- Studente 7 -->
+    <tr>
+      <td>Alessio Capuni</td>
+      <td class="red">4</td>
+      <td>8</td>
+      <td class="red">5</td>
+      <td class="red">3</td>
+      <td>8</td>
+      <td class="red">5</td>
+      <td class="red">4</td>
+    </tr>
+
+    <!-- Studente 8 -->
+    <tr>
+      <td>Cristiano Maio</td>
+      <td class="red">4</td>
+      <td class="red">3</td>
+      <td>6</td>
+      <td>6</td>
+      <td class="red">5</td>
+      <td>8</td>
+      <td>6</td>
+    </tr>
   </table>
+
 </body>
 </html>
