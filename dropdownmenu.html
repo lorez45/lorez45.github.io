@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
+<html lang="it">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu a discesa</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 50px;
+      background-color: #eaf6fb;
+      color: #333;
     }
 
     nav {
@@ -17,26 +18,26 @@
     }
 
     button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
+      padding: 12px 24px;
+      background-color: #007bff;
       color: white;
       border: none;
       cursor: pointer;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: 8px;
       transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #45a049;
+      background-color: #0056b3;
     }
 
     #dropdown-content {
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
       border-radius: 8px;
       z-index: 1;
       margin-top: 10px;
@@ -44,15 +45,12 @@
     }
 
     #dropdown-content a {
-      color: black;
-      padding: 12px 16px;
+      color: #333;
+      padding: 14px 20px;
       text-decoration: none;
       display: block;
       border-bottom: 1px solid #eee;
-    }
-
-    #dropdown-content a:last-child {
-      border-bottom: none;
+      transition: background-color 0.3s;
     }
 
     #dropdown-content a:hover {
@@ -68,16 +66,20 @@
       display: inline-block;
       margin-bottom: 20px;
       text-decoration: none;
-      color: #4CAF50;
+      color: #007bff;
       font-weight: bold;
+    }
+
+    .torna-indietro-btn:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-  <a class="torna-indietro-btn" href="./index.html">Torna alla home</a>
+  <a class="torna-indietro-btn" href="./index.html">← Torna alla home</a>
   <nav>
-    <button>Apri dropdown</button>
+    <button>Apri menu</button>
     <div id="dropdown">
       <div id="dropdown-content">
         <a href="#">Prova 1</a>
