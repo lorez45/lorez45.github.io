@@ -20,40 +20,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
-    .section {
-      background: #ffffff;
-      padding: 40px 30px;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      max-width: 900px;
-      width: 100%;
-      margin-bottom: 40px;
-    }
-
-    .section h1 {
+    h1 {
       font-size: 34px;
       color: #124559;
       margin-bottom: 10px;
     }
 
-    .section p {
+    p {
       font-size: 18px;
       color: #4a4a4a;
       margin-bottom: 30px;
     }
 
-    .links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      border-top: 1px solid #ddd;
-      padding-top: 20px;
-    }
-
-    .links a {
+    .project-box {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,10 +47,16 @@
       border-radius: 12px;
       font-weight: 600;
       font-size: 15px;
-      transition: background 0.3s, transform 0.2s;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
     }
 
-    .links a:hover {
+    .project-box:hover {
       background-color: #0d47a1;
       transform: translateY(-2px);
     }
@@ -79,11 +67,21 @@
       filter: invert(100%);
     }
 
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .altervista-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       text-align: center;
+      max-width: 600px;
+      margin-top: 40px;
     }
 
     .altervista-link {
@@ -105,28 +103,27 @@
 </head>
 <body>
 
-  <div class="section">
-    <h1>Sito di Lorenzo Splinchi</h1>
-    <p>Scopri i miei progetti su GitHub</p>
-    <div class="links">
-      <a href="intestazioni.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> I. intestazioni</a>
-      <a href="paragrafi.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> II. paragrafi</a>
-      <a href="lista.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> III. lista</a>
-      <a href="provetesto.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> IV. provetesto</a>
-      <a href="immagine.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> V. immagine</a>
-      <a href="tabella.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VI. tabella</a>
-      <a href="conclusione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VII. conclusione</a>
-      <a href="registrazione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VIII. registrazione</a>
-      <a href="tabellasfondogrigio.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> IX. tabella sfondo grigio</a>
-      <a href="ricetta.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> X. ricetta</a>
-      <a href="bootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XI. bootstrap</a>
-      <a href="video.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XII. video</a>
-      <a href="modelbootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIII. modello bootstrap</a>
-      <a href="dropdownmenu.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIV. dropdown menù</a>
-    </div>
-  </div>
+  <h1>Sito di Lorenzo Splinchi</h1>
+  <p>Scopri i miei progetti su GitHub</p>
 
-  <div class="section altervista-box">
+  <!-- Progetti GitHub -->
+  <a class="project-box" style="animation-delay: 0.1s" href="intestazioni.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> I. intestazioni</a>
+  <a class="project-box" style="animation-delay: 0.2s" href="paragrafi.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> II. paragrafi</a>
+  <a class="project-box" style="animation-delay: 0.3s" href="lista.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> III. lista</a>
+  <a class="project-box" style="animation-delay: 0.4s" href="provetesto.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> IV. provetesto</a>
+  <a class="project-box" style="animation-delay: 0.5s" href="immagine.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> V. immagine</a>
+  <a class="project-box" style="animation-delay: 0.6s" href="tabella.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VI. tabella</a>
+  <a class="project-box" style="animation-delay: 0.7s" href="conclusione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VII. conclusione</a>
+  <a class="project-box" style="animation-delay: 0.8s" href="registrazione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> VIII. registrazione</a>
+  <a class="project-box" style="animation-delay: 0.9s" href="tabellasfondogrigio.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> IX. tabella sfondo grigio</a>
+  <a class="project-box" style="animation-delay: 1.0s" href="ricetta.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> X. ricetta</a>
+  <a class="project-box" style="animation-delay: 1.1s" href="bootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XI. bootstrap</a>
+  <a class="project-box" style="animation-delay: 1.2s" href="video.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XII. video</a>
+  <a class="project-box" style="animation-delay: 1.3s" href="modelbootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XIII. modello bootstrap</a>
+  <a class="project-box" style="animation-delay: 1.4s" href="dropdownmenu.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg"> XIV. dropdown menù</a>
+
+  <!-- Altervista -->
+  <div class="altervista-box">
     <h1>Visita anche il mio sito su Altervista</h1>
     <p>Clicca qui per accedere al sito ospitato su Altervista:</p>
     <a class="altervista-link" href="https://lorez45.altervista.org" target="_blank">Vai al sito Altervista</a>
