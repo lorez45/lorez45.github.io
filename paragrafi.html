@@ -1,22 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1> Titolo 1 </h1>
-    <h2> Titolo 2</h2>
-    <h3> Titolo 3 </h3>
-    <h4> Titolo 4 </h4>
-    <h5> Titolo 5 </h5>
-    <h6> Titolo 6 </h6>
-    <hr>
-     <h1> Paragrafi </h1>
-    <p> Paragrafo 1</p>
-    <p> Paragrafo 2</p>
-    <p> Paragrafo 3</p>
-    
-  </body>
-  
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stile con Gradiente</title>
+  <style>
+    /* Sfondo gradiente per tutto il body */
+    body {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #f0f0f5; /* testo chiaro per contrasto */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
 
+    /* Titoli h1-h6 con differenze di dimensione e colore */
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0 0 12px 0;
+      font-weight: 700;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
 
+    h1 {
+      font-size: 3rem;
+      color: #ffdd57;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
+    h2 {
+      font-size: 2.5rem;
+      color: #f5a623;
+    }
 
+    h3 {
+      font-size: 2rem;
+      color: #ffffff;
+      opacity: 0.9;
+    }
+
+    h4 {
+      font-size: 1.75rem;
+      color: #cfd8dc;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      color: #b0bec5;
+      font-style: italic;
+    }
+
+    h6 {
+      font-size: 1.25rem;
+      color: #90a4ae;
+      font-weight: 400;
+    }
+
+    /* Paragrafi */
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-bottom: 1em;
+      color: #e0e0e0;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    /* Linea orizzontale */
+    hr {
+      border: none;
+      height: 2px;
+      background: #ffdd57;
+      max-width: 600px;
+      margin: 40px auto;
+      box-shadow: 0 2px 6px #ffdd57aa;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Titolo 1</h1>
+  <h2>Titolo 2</h2>
+  <h3>Titolo 3</h3>
+  <h4>Titolo 4</h4>
+  <h5>Titolo 5</h5>
+  <h6>Titolo 6</h6>
+
+  <hr>
+
+  <h1>Paragrafi</h1>
+  <p>Paragrafo 1</p>
+  <p>Paragrafo 2</p>
+  <p>Paragrafo 3</p>
+</body>
 </html>
+
