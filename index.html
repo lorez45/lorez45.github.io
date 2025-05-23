@@ -15,16 +15,15 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #eaf6fb; /* Colore accessibile per ipovedenti */
+      background-color: #eaf6fb;
       color: #1e1e1e;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
-    .container {
+    .container, .altervista-box {
       background: #ffffff;
       padding: 40px 30px;
       border-radius: 18px;
@@ -32,6 +31,7 @@
       max-width: 700px;
       width: 100%;
       text-align: center;
+      margin-bottom: 40px;
     }
 
     h1 {
@@ -83,6 +83,21 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
+    .altervista-link {
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .altervista-link:hover {
+      background-color: #1e7e34;
+    }
   </style>
 </head>
 <body>
@@ -90,6 +105,7 @@
     <h1>Sito di Lorenzo Splinchi</h1>
     <p>Scopri i miei progetti su GitHub</p>
     <div class="links">
+      <!-- Link ai progetti GitHub -->
       <a href="intestazioni.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> I. intestazioni</a>
       <a href="paragrafi.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> II. paragrafi</a>
       <a href="lista.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> III. lista</a>
@@ -105,6 +121,12 @@
       <a href="modelbootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIII. modello bootstrap</a>
       <a href="dropdownmenu.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIV. dropdown menù</a>
     </div>
+  </div>
+
+  <div class="altervista-box">
+    <h1>Visita anche il mio sito su Altervista</h1>
+    <p>Clicca qui per accedere al sito ospitato su Altervista:</p>
+    <a class="altervista-link" href="https://tuo-nome.altervista.org" target="_blank">Vai al sito Altervista</a>
   </div>
 </body>
 </html>
