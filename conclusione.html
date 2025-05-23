@@ -1,14 +1,151 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Descrizione Automobile</title>
+    <style>
+        /* Reset leggero */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+            font-size: 2.4em;
+            text-align: center;
+        }
+
+        h2 {
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 0.3em;
+            margin-top: 2em;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        table thead {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f2f7fb;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.2em;
+            max-width: 400px;
+            margin-bottom: 2em;
+        }
+
+        p {
+            max-width: 700px;
+            margin-bottom: 1.2em;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            margin-top: 12px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1.5px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.1);
+            vertical-align: middle;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 18px;
+            background-color: #2980b9;
+            color: white;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #1c5980;
+        }
+    </style>
 </head>
 <body>
     <h1>Automobile: Modello XYZ</h1>
 
-    <img src="https://via.placeholder.com/600x400" alt="Immagine dell'automobile" width="600">
+    <img src="https://via.placeholder.com/600x400" alt="Immagine dell'automobile" width="600" />
 
     <h2>Prezzi per Modello e Tipologia di Alimentazione</h2>
     <table border="1">
@@ -63,22 +200,23 @@
 
     <h2>Richiedi Informazioni</h2>
     <form action="/submit" method="post">
-        <label for="concessionaria">Nome della concessionaria visitata:</label><br>
-        <input type="text" id="concessionaria" name="concessionaria" required><br><br>
+        <label for="concessionaria">Nome della concessionaria visitata:</label><br />
+        <input type="text" id="concessionaria" name="concessionaria" required /><br /><br />
 
         <label>
-            <input type="checkbox" name="consenso" required>
+            <input type="checkbox" name="consenso" required />
             Acconsento al trattamento dei dati personali
-        </label><br><br>
+        </label><br /><br />
 
-        <label for="modello">Modello di interesse:</label><br>
+        <label for="modello">Modello di interesse:</label><br />
         <select id="modello" name="modello" required>
             <option value="base">Base</option>
             <option value="sport">Sport</option>
             <option value="luxury">Luxury</option>
-        </select><br><br>
+        </select><br /><br />
 
         <button type="submit">Invia</button>
     </form>
 </body>
 </html>
+
