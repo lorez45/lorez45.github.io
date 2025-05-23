@@ -1,83 +1,73 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immagine Centrata</title>
-    <style>
-        body {
-            font-family: Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .center {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .italic-text {
-            font-style: italic;
-            text-align: right;
-            margin-top: 20px;
-            width: 80%;
-        }
-        hr {
-            width: 80%;
-            margin: 20px 0;
-        }
-        
-        .marquee-text {
-            font-size: 24px;
-            color: #3498db;
-            font-weight: bold;
-            margin: 20px 0;
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            display: block;
-        }
-        
-        .left-align {
-            text-align: left;
-            width: 80%;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Immagine & Testo</title>
+  <style>
+    body {
+      background-color: #eaf6fb;
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .center {
+      margin: 30px 0;
+    }
+
+    img {
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .italic-text {
+      font-style: italic;
+      text-align: right;
+      width: 80%;
+    }
+
+    .left-align {
+      width: 80%;
+      margin-top: 20px;
+    }
+
+    ul, ol {
+      font-size: 1rem;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 <body>
 
-    
-    <div class="center">
-        <img src="https://raw.githubusercontent.com/lorez45/lorez45.github.io/refs/heads/main/img/casa.jpg" alt="casa">
-    </div>
+  <div class="center">
+    <img src="https://raw.githubusercontent.com/lorez45/lorez45.github.io/refs/heads/main/img/casa.jpg" alt="casa">
+  </div>
 
-    
-    <p class="italic-text">Questo è un esempio di testo in corsivo</p>
+  <p class="italic-text">Questo è un esempio di testo in corsivo</p>
 
-    
-    <div class="left-align">
-        <p>Testo con <sup>apice</sup> e <sub>pedice</sub></p>
+  <div class="left-align">
+    <p>Testo con <sup>apice</sup> e <sub>pedice</sub></p>
 
-        
-        <ul type="square">
-            <li>primo punto</li>
-            <li>secondo punto</li>
-            <li>terzo punto</li>
-        </ul>
+    <ul type="square">
+      <li>primo punto</li>
+      <li>secondo punto</li>
+      <li>terzo punto</li>
+    </ul>
 
-        
-        <ol type="A" start="4">
-            <li>quarto punto</li>
-            <li>quinto punto</li>
-            <li>sesto punto</li>
-        </ol>
-    </div>
-
-    
-    
+    <ol type="A" start="4">
+      <li>quarto punto</li>
+      <li>quinto punto</li>
+      <li>sesto punto</li>
+    </ol>
+  </div>
 
 </body>
 </html>
