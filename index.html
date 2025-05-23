@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>I miei progetti GitHub</title>
-
-  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -17,40 +15,41 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #333;
+      background-color: #eaf6fb; /* Colore accessibile per ipovedenti */
+      color: #1e1e1e;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      padding: 20px;
     }
 
     .container {
-      background: #fff;
+      background: #ffffff;
       padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 95%;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      max-width: 700px;
+      width: 100%;
       text-align: center;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #222;
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #124559;
     }
 
     p {
-      font-size: 16px;
-      margin-bottom: 30px;
-      color: #666;
+      font-size: 18px;
+      margin-bottom: 35px;
+      color: #4a4a4a;
     }
 
     .links {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 14px;
     }
 
     .links a {
@@ -58,17 +57,18 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 12px 20px;
-      background-color: #24292e;
+      padding: 14px 24px;
+      background-color: #1565c0;
       color: #fff;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: 600;
-      transition: background 0.3s ease, transform 0.2s ease;
+      font-size: 15px;
+      transition: background 0.3s, transform 0.2s;
     }
 
     .links a:hover {
-      background-color: #3f3f46;
+      background-color: #0d47a1;
       transform: translateY(-2px);
     }
 
@@ -78,7 +78,7 @@
       filter: invert(100%);
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: 600px) {
       .links {
         grid-template-columns: 1fr 1fr;
       }
@@ -89,52 +89,22 @@
   <div class="container">
     <h1>Sito di Lorenzo Splinchi</h1>
     <p>Scopri i miei progetti su GitHub</p>
-
     <div class="links">
-      <a href="intestazioni.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> I. intestazioni
-      </a>
-      <a href="paragrafi.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> II. paragrafi
-      </a>
-      <a href="lista.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> III. lista
-      </a>
-      <a href="provetesto.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> IV. provetesto
-      </a>
-      <a href="immagine.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> V. immagine
-      </a>
-      <a href="tabella.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VI. tabella
-      </a>
-      <a href="conclusione.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VII. conclusione
-      </a>
-      <a href="registrazione.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VIII. registrazione
-      </a>
-      <a href="tabellasfondogrigio.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> IX. tabella sfondo grigio
-      </a>
-      <a href="ricetta.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> X. ricetta
-      </a>
-      <a href="boxflottanti.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XI. box flottanti
-      </a>
-      <a href="video.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XII. video
-      </a>
-      <a href="modelbootstrap.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIII. modello bootstrap
-      </a>  
-      <a href="dropdownmenu.html" target="_blank">
-        <img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIV. dropdown menù
-      </a>
+      <a href="intestazioni.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> I. intestazioni</a>
+      <a href="paragrafi.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> II. paragrafi</a>
+      <a href="lista.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> III. lista</a>
+      <a href="provetesto.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> IV. provetesto</a>
+      <a href="immagine.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> V. immagine</a>
+      <a href="tabella.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VI. tabella</a>
+      <a href="conclusione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VII. conclusione</a>
+      <a href="registrazione.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> VIII. registrazione</a>
+      <a href="tabellasfondogrigio.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> IX. tabella sfondo grigio</a>
+      <a href="ricetta.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> X. ricetta</a>
+      <a href="boxflottanti.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XI. box flottanti</a>
+      <a href="video.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XII. video</a>
+      <a href="modelbootstrap.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIII. modello bootstrap</a>
+      <a href="dropdownmenu.html" target="_blank"><img class="github-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"> XIV. dropdown menù</a>
     </div>
   </div>
 </body>
 </html>
-maicol080
