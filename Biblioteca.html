@@ -1,99 +1,140 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Portale Biblioteca</title>
+<meta charset="UTF-8">
+<title>Portale Biblioteca</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f6f8;
+    }
 
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
 
-        .container {
-            width: 90%;
-            margin: 30px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
+    .filters {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 
-        .book-box {
-            background-color: white;
-            width: 250px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.2s;
-        }
+    .filter-box {
+        background-color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s;
+    }
 
-        .book-box:hover {
-            transform: scale(1.03);
-        }
+    .filter-box:hover {
+        background-color: #ecf0f1;
+    }
 
-        .book-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
 
-        .status {
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
+    .book-box {
+        background-color: white;
+        width: 260px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
 
-        .available {
-            color: green;
-        }
+    .book-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-        .not-available {
-            color: red;
-        }
+    .status {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-        button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #3498db;
-            color: white;
-            cursor: pointer;
-        }
+    .available {
+        color: green;
+    }
 
-        button:disabled {
-            background-color: gray;
-            cursor: not-allowed;
-        }
+    .not-available {
+        color: red;
+    }
 
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            text-align: center;
-            background-color: #ecf0f1;
-            color: #555;
-        }
-    </style>
+    .due-date {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        background-color: #3498db;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background-color: gray;
+        cursor: not-allowed;
+    }
+
+    .alert {
+        width: 90%;
+        margin: 20px auto;
+        background-color: #ffe6e6;
+        border-left: 6px solid red;
+        padding: 15px;
+        border-radius: 8px;
+        display: none;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 15px;
+        text-align: center;
+        background-color: #ecf0f1;
+        color: #555;
+    }
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>📚 Portale di Gestione Biblioteca</h1>
-    <p>Consulta il catalogo e richiedi il prestito dei libri</p>
+    <p>Catalogo libri, prestiti e notifiche automatiche</p>
 </header>
 
-<div class="container" id="catalogo">
-    <!-- I libri verranno inseriti qui tramite JavaScript -->
+<!-- FILTRI -->
+<div class="filters">
+    <div class="filter-box" onclick="mostraCatalogo('tutti')">Tutti i libri</div>
+    <div class="filter-box" onclick="mostraCatalogo('disponibili')">Solo disponibili</div>
 </div>
+
+<!-- NOTIFICHE -->
+<div class="alert" id="notifiche"></div>
+
+<!-- CATALOGO -->
+<div class="container" id="catalogo"></div>
 
 <footer>
     Prototipo software – Gestione Biblioteca
@@ -101,47 +142,75 @@
 
 <script>
     const libri = [
-        { titolo: "Il Signore degli Anelli", disponibile: true },
-        { titolo: "1984", disponibile: true },
-        { titolo: "Il Piccolo Principe", disponibile: false },
-        { titolo: "Harry Potter", disponibile: true }
+        { titolo: "Il Signore degli Anelli", disponibile: true, restituzione: null },
+        { titolo: "1984", disponibile: false, restituzione: "2024-01-10" },
+        { titolo: "Il Piccolo Principe", disponibile: true, restituzione: null },
+        { titolo: "Harry Potter", disponibile: false, restituzione: "2023-12-01" }
     ];
 
-    function mostraCatalogo() {
+    function mostraCatalogo(filtro = "tutti") {
         const catalogo = document.getElementById("catalogo");
         catalogo.innerHTML = "";
 
         libri.forEach((libro, index) => {
+            if (filtro === "disponibili" && !libro.disponibile) return;
+
             const box = document.createElement("div");
             box.className = "book-box";
 
-            const titolo = document.createElement("div");
-            titolo.className = "book-title";
-            titolo.textContent = libro.titolo;
+            box.innerHTML = `
+                <div class="book-title">${libro.titolo}</div>
+                <div class="status ${libro.disponibile ? 'available' : 'not-available'}">
+                    ${libro.disponibile ? 'Disponibile' : 'Non disponibile'}
+                </div>
+                ${libro.restituzione ? `<div class="due-date">Restituzione: ${libro.restituzione}</div>` : ""}
+            `;
 
-            const stato = document.createElement("div");
-            stato.className = "status " + (libro.disponibile ? "available" : "not-available");
-            stato.textContent = libro.disponibile ? "Disponibile" : "Non disponibile";
+            const btn = document.createElement("button");
+            btn.textContent = "Richiedi prestito";
+            btn.disabled = !libro.disponibile;
 
-            const button = document.createElement("button");
-            button.textContent = "Richiedi prestito";
-            button.disabled = !libro.disponibile;
-
-            button.onclick = () => {
+            btn.onclick = () => {
                 libro.disponibile = false;
-                alert("Prestito effettuato con successo!");
-                mostraCatalogo();
+
+                // data restituzione = oggi + 7 giorni
+                const oggi = new Date();
+                oggi.setDate(oggi.getDate() + 7);
+                libro.restituzione = oggi.toISOString().split("T")[0];
+
+                alert("Prestito effettuato! Restituzione entro 7 giorni.");
+                mostraCatalogo(filtro);
+                controllaSolleciti();
             };
 
-            box.appendChild(titolo);
-            box.appendChild(stato);
-            box.appendChild(button);
-
+            box.appendChild(btn);
             catalogo.appendChild(box);
         });
     }
 
+    function controllaSolleciti() {
+        const oggi = new Date();
+        const notifiche = document.getElementById("notifiche");
+        notifiche.innerHTML = "";
+        let trovate = false;
+
+        libri.forEach(libro => {
+            if (!libro.disponibile && libro.restituzione) {
+                const dataRest = new Date(libro.restituzione);
+                if (dataRest < oggi) {
+                    trovate = true;
+                    notifiche.innerHTML += `
+                        ⚠️ Sollecito: il libro "<b>${libro.titolo}</b>" è in ritardo!<br>
+                    `;
+                }
+            }
+        });
+
+        notifiche.style.display = trovate ? "block" : "none";
+    }
+
     mostraCatalogo();
+    controllaSolleciti();
 </script>
 
 </body>
