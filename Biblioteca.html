@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Portale Biblioteca</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .book-box {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .book-box:hover {
+            transform: scale(1.03);
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .available {
+            color: green;
+        }
+
+        .not-available {
+            color: red;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            text-align: center;
+            background-color: #ecf0f1;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 Portale di Gestione Biblioteca</h1>
+    <p>Consulta il catalogo e richiedi il prestito dei libri</p>
+</header>
+
+<div class="container" id="catalogo">
+    <!-- I libri verranno inseriti qui tramite JavaScript -->
+</div>
+
+<footer>
+    Prototipo software – Gestione Biblioteca
+</footer>
+
+<script>
+    const libri = [
+        { titolo: "Il Signore degli Anelli", disponibile: true },
+        { titolo: "1984", disponibile: true },
+        { titolo: "Il Piccolo Principe", disponibile: false },
+        { titolo: "Harry Potter", disponibile: true }
+    ];
+
+    function mostraCatalogo() {
+        const catalogo = document.getElementById("catalogo");
+        catalogo.innerHTML = "";
+
+        libri.forEach((libro, index) => {
+            const box = document.createElement("div");
+            box.className = "book-box";
+
+            const titolo = document.createElement("div");
+            titolo.className = "book-title";
+            titolo.textContent = libro.titolo;
+
+            const stato = document.createElement("div");
+            stato.className = "status " + (libro.disponibile ? "available" : "not-available");
+            stato.textContent = libro.disponibile ? "Disponibile" : "Non disponibile";
+
+            const button = document.createElement("button");
+            button.textContent = "Richiedi prestito";
+            button.disabled = !libro.disponibile;
+
+            button.onclick = () => {
+                libro.disponibile = false;
+                alert("Prestito effettuato con successo!");
+                mostraCatalogo();
+            };
+
+            box.appendChild(titolo);
+            box.appendChild(stato);
+            box.appendChild(button);
+
+            catalogo.appendChild(box);
+        });
+    }
+
+    mostraCatalogo();
+</script>
+
+</body>
+</html>
