@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accesso Biblioteca</title>
+  <title>Accesso alla Biblioteca Digitale</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,62 +16,97 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #eaf6fb, #d7eef9);
+      background: linear-gradient(135deg, #f2f6f9, #e6edf3);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #1e1e1e;
+      color: #1f2933;
     }
 
-    .container {
+    .wrapper {
       background-color: #ffffff;
-      padding: 60px 50px;
-      border-radius: 24px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-      text-align: center;
-      max-width: 520px;
+      max-width: 560px;
       width: 100%;
-      animation: fadeIn 0.8s ease;
+      padding: 70px 60px;
+      border-radius: 26px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      animation: fadeUp 0.9s ease;
     }
 
     h1 {
-      font-size: 36px;
-      color: #124559;
-      margin-bottom: 20px;
+      font-size: 34px;
       font-weight: 700;
+      color: #102a43;
+      margin-bottom: 18px;
     }
 
-    p {
-      font-size: 18px;
-      color: #4a4a4a;
-      margin-bottom: 40px;
-      line-height: 1.6;
+    .subtitle {
+      font-size: 17px;
+      font-weight: 400;
+      color: #4a5d73;
+      line-height: 1.7;
+      margin-bottom: 50px;
     }
 
-    .btn-biblioteca {
+    .btn-access {
+      position: relative;
       display: inline-block;
-      padding: 20px 50px;
-      background-color: #1565c0;
+      padding: 20px 56px;
+      background-color: #1e5fbf;
       color: #ffffff;
-      text-decoration: none;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 600;
-      border-radius: 18px;
-      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 10px 25px rgba(21, 101, 192, 0.35);
+      text-decoration: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow:
+        0 10px 25px rgba(30, 95, 191, 0.35),
+        inset 0 0 0 rgba(255,255,255,0);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .btn-biblioteca:hover {
-      background-color: #0d47a1;
-      transform: translateY(-4px);
-      box-shadow: 0 18px 35px rgba(13, 71, 161, 0.45);
+    .btn-access::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+      );
+      transform: skewX(-20deg);
     }
 
-    @keyframes fadeIn {
+    .btn-access:hover::before {
+      animation: lightSweep 0.9s ease;
+    }
+
+    .btn-access:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 18px 40px rgba(30, 95, 191, 0.45),
+        inset 0 0 12px rgba(255,255,255,0.35);
+    }
+
+    @keyframes lightSweep {
+      from {
+        left: -75%;
+      }
+      to {
+        left: 125%;
+      }
+    }
+
+    @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(18px);
       }
       to {
         opacity: 1;
@@ -80,39 +115,23 @@
     }
 
     @media (max-width: 480px) {
-      .container {
-        padding: 40px 30px;
+      .wrapper {
+        padding: 50px 35px;
       }
 
       h1 {
         font-size: 28px;
       }
 
-      p {
+      .subtitle {
         font-size: 16px;
       }
 
-      .btn-biblioteca {
-        font-size: 20px;
-        padding: 18px 40px;
+      .btn-access {
+        font-size: 18px;
+        padding: 18px 44px;
       }
     }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <h1>Biblioteca Digitale</h1>
-    <p>
-      Benvenuto nella biblioteca di <strong>Splinchi e Russo</strong>.<br>
-      Qui puoi consultare libri, materiali e contenuti digitali in modo semplice e veloce.
-    </p>
-
-    <a href="biblioteca.html" class="btn-biblioteca">
-      Accedi alla Biblioteca
-    </a>
-  </div>
 
 </body>
 </html>
