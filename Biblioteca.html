@@ -85,6 +85,12 @@
         margin-bottom: 10px;
     }
 
+    input {
+        width: 90%;
+        padding: 8px;
+        margin: 5px 0;
+    }
+
     button {
         padding: 10px 15px;
         border: none;
@@ -128,8 +134,22 @@
 
 <header>
     <h1>📚 Portale di Gestione Biblioteca</h1>
-    <p>Catalogo libri, iscritti e gestione prestiti</p>
+    <p>Catalogo libri, anagrafica iscritti e prestiti</p>
 </header>
+
+<!-- ACCESSO -->
+<h2>Iscrizione al prestito</h2>
+<div class="container">
+    <div class="user-box">
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="cognome" placeholder="Cognome">
+        <button onclick="registrati()">Iscriviti</button>
+    </div>
+</div>
+
+<!-- ANAGRAFICA -->
+<h2>Anagrafica iscritti al prestito</h2>
+<div class="container" id="anagrafica"></div>
 
 <!-- FILTRI -->
 <div class="filters">
@@ -143,19 +163,14 @@
 <h2>Catalogo libri</h2>
 <div class="container" id="catalogo"></div>
 
-<h2>Anagrafica iscritti al prestito</h2>
-<div class="container" id="utenti"></div>
-
 <footer>
     Prototipo software – Gestione Biblioteca
 </footer>
 
 <script>
-    const utenti = [
-        { nome: "Mario Rossi", tessera: "U001" },
-        { nome: "Laura Bianchi", tessera: "U002" },
-        { nome: "Giulia Verdi", tessera: "U003" }
-    ];
+    let iscrittoCorrente = null;
+    let numeroTessera = 1;
+    const iscritti = [];
 
     const libri = [
         { titolo: "Il Signore degli Anelli", isbn: "9780261102385", disponibile: true, restituzione: null, prestatoA: null },
@@ -163,6 +178,44 @@
         { titolo: "Il Piccolo Principe", isbn: "9780156013987", disponibile: true, restituzione: null, prestatoA: null },
         { titolo: "Harry Potter", isbn: "9780747532743", disponibile: false, restituzione: "2023-12-01", prestatoA: "Laura Bianchi" }
     ];
+
+    function registrati() {
+        const nome = document.getElementById("nome").value;
+        const cognome = document.getElementById("cognome").value;
+
+        if (nome === "" || cognome === "") {
+            alert("Inserisci nome e cognome");
+            return;
+        }
+
+        const tessera = "TESS-" + numeroTessera++;
+        iscrittoCorrente = nome + " " + cognome;
+
+        iscritti.push({
+            nome: nome,
+            cognome: cognome,
+            tessera: tessera
+        });
+
+        mostraAnagrafica();
+        document.getElementById("nome").value = "";
+        document.getElementById("cognome").value = "";
+    }
+
+    function mostraAnagrafica() {
+        const area = document.getElementById("anagrafica");
+        area.innerHTML = "";
+
+        iscritti.forEach(i => {
+            const box = document.createElement("div");
+            box.className = "user-box";
+            box.innerHTML = `
+                <b>${i.nome} ${i.cognome}</b><br>
+                Tessera: ${i.tessera}
+            `;
+            area.appendChild(box);
+        });
+    }
 
     function mostraCatalogo(filtro = "tutti") {
         const catalogo = document.getElementById("catalogo");
@@ -189,35 +242,24 @@
             btn.disabled = !libro.disponibile;
 
             btn.onclick = () => {
+                if (!iscrittoCorrente) {
+                    alert("Iscriviti prima al prestito");
+                    return;
+                }
+
                 libro.disponibile = false;
-                libro.prestatoA = utenti[0].nome;
+                libro.prestatoA = iscrittoCorrente;
 
                 const oggi = new Date();
                 oggi.setDate(oggi.getDate() + 7);
                 libro.restituzione = oggi.toISOString().split("T")[0];
 
-                alert("Prestito effettuato a " + libro.prestatoA);
                 mostraCatalogo(filtro);
                 controllaSolleciti();
             };
 
             box.appendChild(btn);
             catalogo.appendChild(box);
-        });
-    }
-
-    function mostraUtenti() {
-        const contenitore = document.getElementById("utenti");
-        contenitore.innerHTML = "";
-
-        utenti.forEach(u => {
-            const box = document.createElement("div");
-            box.className = "user-box";
-            box.innerHTML = `
-                <b>${u.nome}</b><br>
-                Tessera: ${u.tessera}
-            `;
-            contenitore.appendChild(box);
         });
     }
 
@@ -242,9 +284,9 @@
     }
 
     mostraCatalogo();
-    mostraUtenti();
     controllaSolleciti();
 </script>
 
 </body>
 </html>
+
