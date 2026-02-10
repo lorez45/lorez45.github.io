@@ -180,8 +180,8 @@
                 <div class="status ${libro.disponibile ? 'available' : 'not-available'}">
                     ${libro.disponibile ? 'Disponibile' : 'Non disponibile'}
                 </div>
-                ${libro.restituzione ? <div class="due-date">Restituzione: ${libro.restituzione}</div> : ""}
-                ${libro.prestatoA ? <div class="borrower">Prestato a: ${libro.prestatoA}</div> : ""}
+                ${libro.restituzione ? `<div class="due-date">Restituzione: ${libro.restituzione}</div>` : ""}
+                ${libro.prestatoA ? `<div class="borrower">Prestato a: ${libro.prestatoA}</div>` : ""}
             `;
 
             const btn = document.createElement("button");
