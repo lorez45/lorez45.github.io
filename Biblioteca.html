@@ -127,16 +127,17 @@
 <body>
 
 <header>
-    <h1>📚 Biblioteca Splinchi-Russo </h1>
+    <h1>📚 Portale di Gestione Biblioteca</h1>
     <p>Catalogo libri, iscritti e gestione prestiti</p>
 </header>
 
+<!-- FILTRI -->
 <div class="filters">
     <div class="filter-box" onclick="mostraCatalogo('tutti')">Tutti i libri</div>
     <div class="filter-box" onclick="mostraCatalogo('disponibili')">Solo disponibili</div>
 </div>
 
-
+<!-- NOTIFICHE -->
 <div class="alert" id="notifiche"></div>
 
 <h2>Catalogo libri</h2>
@@ -151,16 +152,16 @@
 
 <script>
     const utenti = [
-        { nome: "Emanuele Crippa", tessera: "U001" },
-        { nome: "Filippo Bilardo", tessera: "U002" },
+        { nome: "Mario Rossi", tessera: "U001" },
+        { nome: "Laura Bianchi", tessera: "U002" },
         { nome: "Giulia Verdi", tessera: "U003" }
     ];
 
     const libri = [
         { titolo: "Il Signore degli Anelli", isbn: "9780261102385", disponibile: true, restituzione: null, prestatoA: null },
-        { titolo: "1984", isbn: "9780451524935", disponibile: false, restituzione: "2025-01-24", prestatoA: "Emanuele Crippa" },
+        { titolo: "1984", isbn: "9780451524935", disponibile: false, restituzione: "2024-01-10", prestatoA: "Mario Rossi" },
         { titolo: "Il Piccolo Principe", isbn: "9780156013987", disponibile: true, restituzione: null, prestatoA: null },
-        { titolo: "Harry Potter", isbn: "9780747532743", disponibile: false, restituzione: "2025-01-16", prestatoA: "Filippo Bilardo" }
+        { titolo: "Harry Potter", isbn: "9780747532743", disponibile: false, restituzione: "2023-12-01", prestatoA: "Laura Bianchi" }
     ];
 
     function mostraCatalogo(filtro = "tutti") {
