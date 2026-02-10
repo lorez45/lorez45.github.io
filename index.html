@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>I miei progetti GitHub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesso Biblioteca</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -15,66 +16,85 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #eaf6fb;
+      background: linear-gradient(135deg, #eaf6fb, #d7eef9);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #1e1e1e;
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 60px 50px;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      max-width: 520px;
+      width: 100%;
+      animation: fadeIn 0.8s ease;
     }
 
     h1 {
       font-size: 36px;
       color: #124559;
-      margin-bottom: 10px;
-      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       color: #4a4a4a;
       margin-bottom: 40px;
-      text-align: center;
+      line-height: 1.6;
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      justify-content: center;
-      justify-items: center; /* CENTRA IL BOX */
-    }
-
-    .project-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px 40px;        /* PIÙ GRANDE */
+    .btn-biblioteca {
+      display: inline-block;
+      padding: 20px 50px;
       background-color: #1565c0;
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
-      border-radius: 16px;
+      font-size: 22px;
       font-weight: 600;
-      font-size: 22px;           /* TESTO PIÙ GRANDE */
-      min-width: 280px;
-      max-width: 360px;
-      text-align: center;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      border-radius: 18px;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 25px rgba(21, 101, 192, 0.35);
     }
 
-    .project-box:hover {
+    .btn-biblioteca:hover {
       background-color: #0d47a1;
-      transform: scale(1.05) translateY(-2px);
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px rgba(13, 71, 161, 0.45);
     }
 
-    @media (max-width: 960px) {
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
     @media (max-width: 480px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
+      .container {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .btn-biblioteca {
+        font-size: 20px;
+        padding: 18px 40px;
       }
     }
   </style>
@@ -82,11 +102,15 @@
 
 <body>
 
-  <h1>Accedi alla biblioteca di Splinchi e Russo</h1>
+  <div class="container">
+    <h1>Biblioteca Digitale</h1>
+    <p>
+      Benvenuto nella biblioteca di <strong>Splinchi e Russo</strong>.<br>
+      Qui puoi consultare libri, materiali e contenuti digitali in modo semplice e veloce.
+    </p>
 
-  <div class="projects-grid">
-    <a class="project-box" href="Biblioteca.html" target="_blank">
-      Biblioteca
+    <a href="biblioteca.html" class="btn-biblioteca">
+      Accedi alla Biblioteca
     </a>
   </div>
 
