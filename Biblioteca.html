@@ -85,10 +85,20 @@
         margin-bottom: 10px;
     }
 
+    /* MIGLIORAMENTO BOX INPUT */
     input {
-        width: 90%;
-        padding: 8px;
-        margin: 5px 0;
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #3498db;
     }
 
     button {
@@ -141,6 +151,7 @@
 <h2>Iscrizione al prestito</h2>
 <div class="container">
     <div class="user-box">
+        <h3>Nuovo iscritto</h3>
         <input type="text" id="nome" placeholder="Nome">
         <input type="text" id="cognome" placeholder="Cognome">
         <button onclick="registrati()">Iscriviti</button>
@@ -176,7 +187,13 @@
         { titolo: "Il Signore degli Anelli", isbn: "9780261102385", disponibile: true, restituzione: null, prestatoA: null },
         { titolo: "1984", isbn: "9780451524935", disponibile: false, restituzione: "2024-01-10", prestatoA: "Mario Rossi" },
         { titolo: "Il Piccolo Principe", isbn: "9780156013987", disponibile: true, restituzione: null, prestatoA: null },
-        { titolo: "Harry Potter", isbn: "9780747532743", disponibile: false, restituzione: "2023-12-01", prestatoA: "Laura Bianchi" }
+        { titolo: "Harry Potter", isbn: "9780747532743", disponibile: false, restituzione: "2023-12-01", prestatoA: "Laura Bianchi" },
+
+        // NUOVI 4 LIBRI
+        { titolo: "Il Nome della Rosa", isbn: "9788804681443", disponibile: true, restituzione: null, prestatoA: "Giovanni Verdi" },
+        { titolo: "Il Codice Da Vinci", isbn: "9788850242791", disponibile: false, restituzione: "2024-01-15", prestatoA: "Chiara Neri" },
+        { titolo: "La Divina Commedia", isbn: "9788807891475", disponibile: true, restituzione: null, prestatoA: null },
+        { titolo: "Il Gattopardo", isbn: "9788817052140", disponibile: false, restituzione: "2024-02-01", prestatoA: "Alessandro Russo" }
     ];
 
     function registrati() {
@@ -289,4 +306,3 @@
 
 </body>
 </html>
-
